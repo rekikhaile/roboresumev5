@@ -4,19 +4,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Resume {
 
     private String name;
+
+
     private String email;
-    private String achievement;
+
+
+
+
     private String experience;
+
+
     private String skill;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    public Resume() {
+    }
+
+    public Resume(String name, String email, String experience, String skill) {
+        this.name = name;
+        this.email = email;
+
+        this.experience = experience;
+        this.skill = skill;
+    }
 
     public String getName() {
         return name;
@@ -34,13 +55,6 @@ public class Resume {
         this.email = email;
     }
 
-    public String getAchievement() {
-        return achievement;
-    }
-
-    public void setAchievement(String achievement) {
-        this.achievement = achievement;
-    }
 
     public String getExperience() {
         return experience;

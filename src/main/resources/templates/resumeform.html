@@ -21,14 +21,11 @@
             <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br/>
             <label>Email: </label><input type="text" th:field="*{email}"/>
 
-            <span th:if="${#fields.hasErrors('achievement')}" th:errors="*{achievement}"></span><br/>
-            <label>Achievement: </label><input type="button" th:field="*{achievement}" value="Add Achievements" onclick="parent.location='/addachieve'"/>
-
             <span th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}"></span><br/>
             <label>Experience: </label><input type="text" th:field="*{experience}"/>
 
-            <span th:if="${#fields.hasErrors('achievement')}" th:errors="*{achievement}"></span><br/>
-            <label>Skill: </label><input type="text" th:field="*{achievement}"/>
+            <span th:if="${#fields.hasErrors('skill')}" th:errors="*{skill}"></span><br/>
+            <label>Skill: </label><input type="text" th:field="*{skill}"/>
 
             <input type="submit" value="Add" />
 

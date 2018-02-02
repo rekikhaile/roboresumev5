@@ -28,9 +28,11 @@
             <tr th:each="resume :${resumes}">
                 <td th:text ="${resume.name}">Some test text here</td>
                 <td th:text ="${resume.email}">Some test text here</td>
-                <td th:text ="${resume.achievement}">Some test text here</td>
                 <td th:text ="${resume.experience}">Some test text here</td>
                 <td th:text ="${resume.skill}">Some test text here</td>
+
+
+
 
                 <td>
                     <a th:href ="@{/update/{id}(id=${resume.id})}">Update</a>-
@@ -38,7 +40,8 @@
                     <a th:href ="@{/delete/{id}(id=${resume.id})}">Delete</a>
                 </td>
 
-            </tr>
+
+</tr>
             </tbody>
         </table>
     </div>
